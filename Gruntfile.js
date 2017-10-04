@@ -32,6 +32,9 @@ module.exports = function(grunt) {
         options: { banner: '<%= banner %>' },
         files: { src: [ 'dist/*' ] }
       }
+    },
+    copy: {
+      NGStore: { cwd: 'dist/', src: ['**/**'], dest: '../js/', expand: true }
     }
   });
 
@@ -39,9 +42,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  
   grunt.loadNpmTasks('grunt-banner');
 
   // Default task.
-  grunt.registerTask('default', ['clean', 'coffee', 'uglify', 'usebanner']);
+  grunt.registerTask('default', ['clean', 'coffee', 'uglify', 'copy', 'usebanner']);
 
 };

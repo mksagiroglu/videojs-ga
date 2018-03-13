@@ -1,6 +1,6 @@
 /*
-* videojs-ga - v0.4.2 - 2015-02-06
-* Copyright (c) 2015 Michael Bensoussan
+* videojs-ga - v0.4.2 - 2018-02-20
+* Copyright (c) 2018 Michael Bensoussan
 * Licensed MIT
 */
 (function() {
